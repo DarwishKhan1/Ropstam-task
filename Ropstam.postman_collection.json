@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "8a11eebc-8ebb-4141-9782-6de55047b645",
+		"name": "Ropstam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Darwish khan\",\r\n    \"email\": \"darwishkhan772@gmail.com\",\r\n    \"password\": \"123123\",\r\n    \"gender\": \"male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"darwishkhan772@gmail.com\",\r\n    \"password\": \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"darwishkhan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/update/63116eb5acc77c2fecd2edbc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"update",
+						"63116eb5acc77c2fecd2edbc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bus\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/category/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"category",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update  category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bus update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/category/update/6311ad69d5255fede7956b80",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"category",
+						"update",
+						"6311ad69d5255fede7956b80"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/category/6311ad69d5255fede7956b80",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"category",
+						"6311ad69d5255fede7956b80"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMxMTZlYjVhY2M3N2MyZmVjZDJlZGJjIn0sImlhdCI6MTY2MjIwMjY3MiwiZXhwIjoxNjYyMjA5ODcyfQ.rruyVb-ByBEA3tASETdvo-5E_gSLm90Bt4K-TAeakLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lambergini\",\r\n    \"categoryId\": \"6311ad69d5255fede7956b80\",\r\n    \"model\": \"2020\",\r\n    \"color\": \"White\",\r\n    \"make\": \"Tesla\",\r\n    \"registrationNo\": \"AES-123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/car/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"car",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMxMTZlYjVhY2M3N2MyZmVjZDJlZGJjIn0sImlhdCI6MTY2MjIwMjY3MiwiZXhwIjoxNjYyMjA5ODcyfQ.rruyVb-ByBEA3tASETdvo-5E_gSLm90Bt4K-TAeakLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lambergini Updated\",\r\n    \"categoryId\": \"6311ad69d5255fede7956b80\",\r\n    \"model\": \"2020\",\r\n    \"color\": \"Dark blue\",\r\n    \"make\": \"Tesla\",\r\n    \"registrationNo\": \"AES-123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/car/update/631334fdfe44e6d64c5b0e79",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"car",
+						"update",
+						"631334fdfe44e6d64c5b0e79"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Cars",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMxMTZlYjVhY2M3N2MyZmVjZDJlZGJjIn0sImlhdCI6MTY2MjIwMjY3MiwiZXhwIjoxNjYyMjA5ODcyfQ.rruyVb-ByBEA3tASETdvo-5E_gSLm90Bt4K-TAeakLQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"car"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
